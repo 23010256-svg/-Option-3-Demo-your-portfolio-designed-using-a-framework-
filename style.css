@@ -1,0 +1,59 @@
+/* --- Custom CSS Variables & Dark Theme Overrides --- */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #212529;
+}
+
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #f8f9fa;
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+body.dark-theme .bg-body-tertiary {
+    background-color: #1e1e1e !important;
+}
+
+body.dark-theme .card {
+    background-color: #252525;
+    color: #ffffff;
+}
+
+body.dark-theme .text-body-secondary {
+    color: #cccccc !important;
+}
+
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* EXTRA 4: Custom CSS Hover Lift Animation on Cards */
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* EXTRA 2: Back to Top Floating Button Styling */
+.btn-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 1000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    line-height: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
